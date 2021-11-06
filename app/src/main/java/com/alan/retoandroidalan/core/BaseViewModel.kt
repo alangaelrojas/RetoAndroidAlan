@@ -15,7 +15,6 @@ abstract class BaseViewModel : ViewModel() {
     sealed class BaseFlowState {
         object OnLoading : BaseFlowState()
         data class OnError(val error: Int) : BaseFlowState()
-        object OnLoginSuccess: BaseFlowState()
     }
 
 }

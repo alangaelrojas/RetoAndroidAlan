@@ -17,6 +17,8 @@ import com.alan.retoandroidalan.databinding.FragmentLoginBinding
 import com.alan.retoandroidalan.features.tasks.TasksActivity
 import com.alan.retoandroidalan.features.user.create.CreateAccountFragment
 import com.alan.retoandroidalan.features.user.login.lifecycle.LoginViewModel
+import com.alan.retoandroidalan.features.user.login.lifecycle.LoginViewModel.LoginFlowState
+import com.alan.retoandroidalan.features.user.login.lifecycle.LoginViewModel.LoginFlowState.*
 
 class LoginFragment : BaseFragment() {
 
@@ -35,13 +37,17 @@ class LoginFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(viewModelStore, defaultViewModelProviderFactory)[LoginViewModel::class.java]
 
+        viewModel.flowState.observe(viewLifecycleOwner, {
+            when(it){
+                is OnLoginSuccess -> {
+                    TasksActivity.startActivity(requireContext())
+                }
+            }
+        })
         viewModel.baseFlowState.observe(viewLifecycleOwner, {
             when(it){
                 is OnLoading -> {
                     Toast.makeText(requireContext(), "Iniciando sesion", Toast.LENGTH_SHORT).show()
-                }
-                is OnLoginSuccess -> {
-                    TasksActivity.startActivity(requireContext())
                 }
                 is OnError -> {
                     Toast.makeText(requireContext(), getString(it.error), Toast.LENGTH_SHORT).show()
