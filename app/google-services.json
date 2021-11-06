@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "759013796114",
+    "project_id": "retoandroid-6add4",
+    "storage_bucket": "retoandroid-6add4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759013796114:android:8e0ac0f6ee65c29a562bcb",
+        "android_client_info": {
+          "package_name": "com.alan.retoandroidalan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759013796114-g5g5nv590sv9695rfbi0hn0tr96946iv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBA5AWrRVbikQ4jrDQDrxbkQmFMsJWCFQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759013796114-g5g5nv590sv9695rfbi0hn0tr96946iv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

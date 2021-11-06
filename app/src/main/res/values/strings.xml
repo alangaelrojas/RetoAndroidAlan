@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RetoAndroidAlan</string>
+    <string name="welcome">Bienvenido</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="enter">Entrar</string>
+    <string name="no_user_message">Aún no tengo un usuario.</string>
+    <string name="register_me_message">Registrarme</string>
+    <string name="impossible_init_session">No es posible iniciar sesión</string>
+    <string name="unknown_error">Error desconocido</string>
+    <string name="my_tasks">Mis tareas</string>
+</resources>
